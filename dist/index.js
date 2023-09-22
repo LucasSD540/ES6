@@ -9,12 +9,7 @@ let Alunos = [{
   "nota": 5
 }];
 function retornaAprovados() {
-  const aprovados = [];
-  for (let i = 0; i < Alunos.length; i++) {
-    if (Alunos[i].nota >= 6) {
-      aprovados.push(Alunos[i]);
-    }
-  }
+  const aprovados = Alunos.filter(aluno => aluno.nota >= 6);
   return aprovados;
 }
 console.log(retornaAprovados());
